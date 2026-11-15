@@ -1,0 +1,7 @@
+.venv/
+pipeline/.venv/
+engine/node_modules/
+engine/dist/
+__pycache__/
+*.py[cod]
+.DS_Store

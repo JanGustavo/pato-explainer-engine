@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0" />
+  <title>Pato Explainer Engine (1080x1920)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #1a1c29;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    #webgl-canvas {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      display: block;
+    }
+    #hud-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* Margem segura para UI do Shorts / TikTok / Kwai */
+      padding: 180px 90px 240px 90px;
+    }
+    #hook-banner {
+      align-self: center;
+      background: #ffd166;
+      color: #111827;
+      font-size: 64px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 22px 44px;
+      border-radius: 24px;
+      border: 8px solid #111827;
+      box-shadow: 0 12px 0 #111827;
+      text-align: center;
+      letter-spacing: -1px;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: none;
+    }
+    #subtitles-box {
+      align-self: center;
+      background: rgba(17, 24, 39, 0.88);
+      color: #ffffff;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.25;
+      padding: 24px 40px;
+      border-radius: 24px;
+      border: 4px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+      max-width: 880px;
+    }
+    #rewind-overlay {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.08) 0px,
+        rgba(255, 255, 255, 0.08) 4px,
+        transparent 4px,
+        transparent 10px
+      );
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 96px;
+      font-weight: 900;
+      color: #ffffff;
+      text-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="webgl-canvas" width="1080" height="1920"></canvas>
+  <div id="hud-layer">
+    <div id="hook-banner"></div>
+    <div id="subtitles-box"></div>
+  </div>
+  <div id="rewind-overlay">⏪ REWIND</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

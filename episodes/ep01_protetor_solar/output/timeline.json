@@ -1,0 +1,426 @@
+{
+  "episode_id": "ep01_ventilador",
+  "title": "Por que o ventilador move o ar?",
+  "outfit": "workshop",
+  "bgm_mood": "curious_upbeat",
+  "total_duration": 36.029,
+  "scenes": [
+    {
+      "id": "sc01_hook",
+      "narration": "Ele não fabrica vento. Então, como um ventilador refresca a sala?",
+      "hud_text": "ELE NÃO FABRICA VENTO?!",
+      "camera": "duck_closeup",
+      "duck": {
+        "pos": [
+          -0.9,
+          0,
+          0.8
+        ],
+        "rotY": 0.45,
+        "anim": "shock"
+      },
+      "fx": "speed_lines",
+      "objects": [
+        {
+          "id": "fan_base",
+          "type": "cylinder",
+          "pos": [
+            0.7,
+            0.15,
+            0
+          ],
+          "scale": [
+            0.9,
+            0.3,
+            0.9
+          ],
+          "color": "#334155"
+        },
+        {
+          "id": "fan_neck",
+          "type": "cylinder",
+          "pos": [
+            0.7,
+            0.9,
+            0
+          ],
+          "scale": [
+            0.18,
+            1.4,
+            0.18
+          ],
+          "color": "#475569"
+        },
+        {
+          "id": "fan_hub",
+          "type": "sphere",
+          "pos": [
+            0.7,
+            1.65,
+            0.15
+          ],
+          "scale": [
+            0.45,
+            0.45,
+            0.45
+          ],
+          "color": "#38bdf8"
+        }
+      ],
+      "start": 0.0,
+      "speech_end": 3.648,
+      "end": 3.868
+    },
+    {
+      "id": "sc02_comic_fail",
+      "narration": "Se você tentar soprar o ar parado na mão, vai ficar sem fôlego em cinco segundos.",
+      "hud_text": "TENTATIVA Nº 1: SOPRAR",
+      "camera": "hero_wide",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.2
+        ],
+        "rotY": 1.3,
+        "anim": "confused"
+      },
+      "fx": "smoke",
+      "objects": [
+        {
+          "id": "mini_blade",
+          "type": "box",
+          "pos": [
+            0.4,
+            1.2,
+            0.2
+          ],
+          "scale": [
+            0.1,
+            0.9,
+            0.25
+          ],
+          "color": "#f97316"
+        },
+        {
+          "id": "fan_stand",
+          "type": "cylinder",
+          "pos": [
+            0.4,
+            0.5,
+            0.2
+          ],
+          "scale": [
+            0.25,
+            1.0,
+            0.25
+          ],
+          "color": "#334155"
+        }
+      ],
+      "start": 3.868,
+      "speech_end": 8.54,
+      "end": 8.76
+    },
+    {
+      "id": "sc03_cutaway_motor",
+      "narration": "Por dentro, um motor elétrico gira o eixo central centenas de vezes por minuto.",
+      "hud_text": "O MOTOR GIRA O EIXO",
+      "camera": "cutaway_center",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.55,
+        "anim": "point"
+      },
+      "fx": "none",
+      "objects": [
+        {
+          "id": "motor_housing",
+          "type": "cylinder",
+          "pos": [
+            0.4,
+            1.3,
+            -0.3
+          ],
+          "rot": [
+            1.57,
+            0,
+            0
+          ],
+          "scale": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "color": "#64748b",
+          "opacity": 0.35
+        },
+        {
+          "id": "rotor_core",
+          "type": "cylinder",
+          "pos": [
+            0.4,
+            1.3,
+            -0.3
+          ],
+          "rot": [
+            1.57,
+            0,
+            0
+          ],
+          "scale": [
+            0.45,
+            0.7,
+            0.45
+          ],
+          "color": "#f59e0b",
+          "anim": "spin_y"
+        },
+        {
+          "id": "shaft",
+          "type": "cylinder",
+          "pos": [
+            0.4,
+            1.3,
+            0.35
+          ],
+          "rot": [
+            1.57,
+            0,
+            0
+          ],
+          "scale": [
+            0.14,
+            0.9,
+            0.14
+          ],
+          "color": "#e2e8f0"
+        }
+      ],
+      "start": 8.76,
+      "speech_end": 13.304,
+      "end": 13.524
+    },
+    {
+      "id": "sc04_blades_angle",
+      "narration": "O segredo está no ângulo das pás. Elas são inclinadas como asas de avião para fatiar o ar e empurrá-lo para frente.",
+      "hud_text": "PÁS INCLINADAS EMPURRAM O AR",
+      "camera": "top_isometric",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.55,
+        "anim": "build"
+      },
+      "fx": "none",
+      "objects": [
+        {
+          "id": "hub",
+          "type": "sphere",
+          "pos": [
+            0.3,
+            1.3,
+            0
+          ],
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "color": "#0284c7"
+        },
+        {
+          "id": "blade_v",
+          "type": "box",
+          "pos": [
+            0.3,
+            1.3,
+            0
+          ],
+          "rot": [
+            0,
+            0.35,
+            0
+          ],
+          "scale": [
+            0.28,
+            2.2,
+            0.06
+          ],
+          "color": "#38bdf8",
+          "anim": "spin_z"
+        },
+        {
+          "id": "blade_h",
+          "type": "box",
+          "pos": [
+            0.3,
+            1.3,
+            0
+          ],
+          "rot": [
+            0.35,
+            0,
+            0
+          ],
+          "scale": [
+            2.2,
+            0.28,
+            0.06
+          ],
+          "color": "#38bdf8",
+          "anim": "spin_z"
+        },
+        {
+          "id": "air_stream",
+          "type": "water_flow",
+          "pos": [
+            0.3,
+            1.3,
+            1.2
+          ],
+          "rot": [
+            0,
+            1.57,
+            0
+          ],
+          "color": "#bae6fd"
+        }
+      ],
+      "start": 13.524,
+      "speech_end": 19.839,
+      "end": 20.059
+    },
+    {
+      "id": "sc05_pressure_diff",
+      "narration": "Isso cria baixa pressão atrás da hélice, sugando o ar do fundo e criando um fluxo contínuo que acelera a evaporação do suor na sua pele.",
+      "hud_text": "BAIXA PRESSÃO + FLUXO CONTÍNUO",
+      "camera": "cutaway_center",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.55,
+        "anim": "point"
+      },
+      "fx": "none",
+      "objects": [
+        {
+          "id": "air_in",
+          "type": "water_flow",
+          "pos": [
+            0.3,
+            1.3,
+            -1.3
+          ],
+          "rot": [
+            0,
+            1.57,
+            0
+          ],
+          "color": "#94a3b8"
+        },
+        {
+          "id": "fan_disc",
+          "type": "torus",
+          "pos": [
+            0.3,
+            1.3,
+            0
+          ],
+          "scale": [
+            1.3,
+            1.3,
+            1.3
+          ],
+          "color": "#38bdf8",
+          "anim": "pulse"
+        },
+        {
+          "id": "air_out",
+          "type": "water_flow",
+          "pos": [
+            0.3,
+            1.3,
+            1.3
+          ],
+          "rot": [
+            0,
+            1.57,
+            0
+          ],
+          "color": "#38bdf8"
+        },
+        {
+          "id": "arrow_dir",
+          "type": "arrow",
+          "pos": [
+            1.5,
+            1.3,
+            0.3
+          ],
+          "rot": [
+            1.57,
+            0,
+            0
+          ],
+          "scale": [
+            1.1,
+            1.1,
+            1.1
+          ],
+          "color": "#22c55e"
+        }
+      ],
+      "start": 20.059,
+      "speech_end": 27.547,
+      "end": 27.767
+    },
+    {
+      "id": "sc06_outro",
+      "narration": "O ventilador não esfria o quarto, ele movimenta o ar para o seu corpo perder calor mais rápido. Segue o Pato em Corte para desmontar o próximo!",
+      "hud_text": "SEGUE O PATO EM CORTE!",
+      "camera": "hero_wide",
+      "duck": {
+        "pos": [
+          0,
+          0,
+          1.2
+        ],
+        "rotY": 0,
+        "anim": "celebrate"
+      },
+      "fx": "speed_lines",
+      "objects": [
+        {
+          "id": "fan_ok",
+          "type": "torus",
+          "pos": [
+            0,
+            1.5,
+            -1.0
+          ],
+          "scale": [
+            1.6,
+            1.6,
+            1.6
+          ],
+          "color": "#22c55e",
+          "anim": "spin_z"
+        }
+      ],
+      "start": 27.767,
+      "speech_end": 35.809,
+      "end": 36.029
+    }
+  ]
+}

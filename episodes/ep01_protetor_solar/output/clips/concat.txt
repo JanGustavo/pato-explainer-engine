@@ -1,0 +1,6 @@
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_00_padded.wav'
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_01_padded.wav'
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_02_padded.wav'
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_03_padded.wav'
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_04_padded.wav'
+file '/media/jandersongustavo/f8223ea0-bc74-41e8-8f66-650dbe31ee07/Arquivos_Janderson/Documentos/Projetos/shorts-engine/pato-explainer-engine/episodes/ep01_protetor_solar/output/clips/scene_05_padded.wav'
