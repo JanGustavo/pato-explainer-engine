@@ -1,0 +1,1590 @@
+{
+  "episode_id": "ep01_ventilador",
+  "title": "O ventilador não esfria o ar. Então por que refresca?",
+  "outfit": "workshop",
+  "bgm_mood": "curious_upbeat",
+  "total_duration": 47.072,
+  "scenes": [
+    {
+      "id": "sc01_calorao_hook",
+      "tone": "hook",
+      "environment": "living_room",
+      "narration": "Tá um calorão... você cai no sofá, liga o ventilador no máximo e pensa: agora vai!",
+      "hud_text": "CALOR DERRETENDO O PATO!",
+      "camera": "hero_wide",
+      "duck": {
+        "pos": [
+          -0.65,
+          0,
+          0.85
+        ],
+        "rotY": 0.25,
+        "anim": "overheat"
+      },
+      "fx": "sweat",
+      "objects": [
+        {
+          "id": "living_sofa",
+          "type": "sofa",
+          "pos": [
+            -0.1,
+            0,
+            -0.9
+          ],
+          "scale": [
+            0.95,
+            0.95,
+            0.95
+          ],
+          "color": "#dc2626"
+        },
+        {
+          "id": "thermo",
+          "type": "thermometer",
+          "pos": [
+            0.8,
+            0,
+            -0.4
+          ],
+          "scale": [
+            1.15,
+            1.15,
+            1.15
+          ]
+        }
+      ],
+      "start": 0.0,
+      "speech_end": 4.749,
+      "end": 4.869,
+      "tts": {
+        "kind": "hook",
+        "speed": 1.22
+      },
+      "caption_chunks": [
+        {
+          "text": "Tá um calorão...",
+          "start": 0.0,
+          "end": 0.94,
+          "words": [
+            {
+              "w": "Tá",
+              "start": 0.0,
+              "end": 0.212
+            },
+            {
+              "w": "um",
+              "start": 0.212,
+              "end": 0.425
+            },
+            {
+              "w": "calorão...",
+              "start": 0.425,
+              "end": 0.94
+            }
+          ]
+        },
+        {
+          "text": "você cai no",
+          "start": 1.26,
+          "end": 1.884,
+          "words": [
+            {
+              "w": "você",
+              "start": 1.26,
+              "end": 1.514
+            },
+            {
+              "w": "cai",
+              "start": 1.514,
+              "end": 1.722
+            },
+            {
+              "w": "no",
+              "start": 1.722,
+              "end": 1.884
+            }
+          ]
+        },
+        {
+          "text": "sofá, liga o",
+          "start": 1.884,
+          "end": 2.647,
+          "words": [
+            {
+              "w": "sofá,",
+              "start": 1.884,
+              "end": 2.138
+            },
+            {
+              "w": "liga",
+              "start": 2.277,
+              "end": 2.531
+            },
+            {
+              "w": "o",
+              "start": 2.531,
+              "end": 2.647
+            }
+          ]
+        },
+        {
+          "text": "ventilador no máximo",
+          "start": 2.647,
+          "end": 3.686,
+          "words": [
+            {
+              "w": "ventilador",
+              "start": 2.647,
+              "end": 3.178
+            },
+            {
+              "w": "no",
+              "start": 3.178,
+              "end": 3.34
+            },
+            {
+              "w": "máximo",
+              "start": 3.34,
+              "end": 3.686
+            }
+          ]
+        },
+        {
+          "text": "e pensa:",
+          "start": 3.686,
+          "end": 4.241,
+          "words": [
+            {
+              "w": "e",
+              "start": 3.686,
+              "end": 3.802
+            },
+            {
+              "w": "pensa:",
+              "start": 3.802,
+              "end": 4.102
+            }
+          ]
+        },
+        {
+          "text": "agora vai!",
+          "start": 4.241,
+          "end": 4.749,
+          "words": [
+            {
+              "w": "agora",
+              "start": 4.241,
+              "end": 4.541
+            },
+            {
+              "w": "vai!",
+              "start": 4.541,
+              "end": 4.749
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc02_fourth_wall",
+      "tone": "curious",
+      "environment": "living_room",
+      "narration": "Só que tem uma coisa que ninguém te conta: esse ventilador não esfria o ar. Nem meio grau!",
+      "hud_text": "ELE NÃO ESFRIA O AR!",
+      "camera": "duck_closeup",
+      "duck": {
+        "pos": [
+          -0.75,
+          0,
+          0.85
+        ],
+        "rotY": 0.3,
+        "anim": "fourth_wall"
+      },
+      "fx": "speed_lines",
+      "labels": [
+        {
+          "text": "MESMA TEMPERATURA",
+          "anchor": {
+            "obj": "real_fan",
+            "local": [
+              0,
+              1.15,
+              0
+            ]
+          },
+          "side": "right",
+          "at": 0.5
+        }
+      ],
+      "objects": [
+        {
+          "id": "living_sofa",
+          "type": "sofa",
+          "pos": [
+            -0.1,
+            0,
+            -0.9
+          ],
+          "scale": [
+            0.95,
+            0.95,
+            0.95
+          ],
+          "color": "#dc2626"
+        },
+        {
+          "id": "real_fan",
+          "type": "electric_fan",
+          "pos": [
+            0.5,
+            0,
+            0.2
+          ],
+          "rot": [
+            0,
+            -0.45,
+            0
+          ],
+          "scale": [
+            1.05,
+            1.05,
+            1.05
+          ],
+          "spin_speed": 18
+        }
+      ],
+      "start": 4.869,
+      "speech_end": 10.48,
+      "end": 10.76,
+      "tts": {
+        "kind": "curious",
+        "speed": 1.04
+      },
+      "caption_chunks": [
+        {
+          "text": "Só que tem",
+          "start": 4.869,
+          "end": 5.542,
+          "words": [
+            {
+              "w": "Só",
+              "start": 4.869,
+              "end": 5.058
+            },
+            {
+              "w": "que",
+              "start": 5.058,
+              "end": 5.3
+            },
+            {
+              "w": "tem",
+              "start": 5.3,
+              "end": 5.542
+            }
+          ]
+        },
+        {
+          "text": "uma coisa que",
+          "start": 5.542,
+          "end": 6.376,
+          "words": [
+            {
+              "w": "uma",
+              "start": 5.542,
+              "end": 5.784
+            },
+            {
+              "w": "coisa",
+              "start": 5.784,
+              "end": 6.134
+            },
+            {
+              "w": "que",
+              "start": 6.134,
+              "end": 6.376
+            }
+          ]
+        },
+        {
+          "text": "ninguém te conta:",
+          "start": 6.376,
+          "end": 7.372,
+          "words": [
+            {
+              "w": "ninguém",
+              "start": 6.376,
+              "end": 6.834
+            },
+            {
+              "w": "te",
+              "start": 6.834,
+              "end": 7.022
+            },
+            {
+              "w": "conta:",
+              "start": 7.022,
+              "end": 7.372
+            }
+          ]
+        },
+        {
+          "text": "esse ventilador",
+          "start": 7.692,
+          "end": 8.546,
+          "words": [
+            {
+              "w": "esse",
+              "start": 7.692,
+              "end": 7.968
+            },
+            {
+              "w": "ventilador",
+              "start": 7.968,
+              "end": 8.546
+            }
+          ]
+        },
+        {
+          "text": "não esfria o ar.",
+          "start": 8.546,
+          "end": 9.701,
+          "words": [
+            {
+              "w": "não",
+              "start": 8.546,
+              "end": 8.772
+            },
+            {
+              "w": "esfria",
+              "start": 8.772,
+              "end": 9.149
+            },
+            {
+              "w": "o",
+              "start": 9.149,
+              "end": 9.274
+            },
+            {
+              "w": "ar.",
+              "start": 9.274,
+              "end": 9.45
+            }
+          ]
+        },
+        {
+          "text": "Nem meio grau!",
+          "start": 9.701,
+          "end": 10.48,
+          "words": [
+            {
+              "w": "Nem",
+              "start": 9.701,
+              "end": 9.927
+            },
+            {
+              "w": "meio",
+              "start": 9.927,
+              "end": 10.204
+            },
+            {
+              "w": "grau!",
+              "start": 10.204,
+              "end": 10.48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc03_motor_cutaway",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "Por dentro, é só um motor elétrico. A corrente passa pelas bobinas de cobre, cria um campo magnético, e o eixo gira mais de mil vezes por minuto.",
+      "hud_text": "POR DENTRO DO MOTOR",
+      "camera": "cutaway_center",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.6,
+        "anim": "point"
+      },
+      "fx": "none",
+      "labels": [
+        {
+          "text": "BOBINAS DE COBRE",
+          "anchor": {
+            "obj": "fan_cutaway",
+            "local": [
+              0.165,
+              1.15,
+              -0.22
+            ]
+          },
+          "side": "right",
+          "at": 0.4
+        }
+      ],
+      "objects": [
+        {
+          "id": "fan_cutaway",
+          "type": "electric_fan",
+          "pos": [
+            0.45,
+            0,
+            0.1
+          ],
+          "rot": [
+            0,
+            -0.75,
+            0
+          ],
+          "scale": [
+            1.15,
+            1.15,
+            1.15
+          ],
+          "cutaway": true,
+          "spin_speed": 14
+        }
+      ],
+      "start": 10.76,
+      "speech_end": 19.658,
+      "end": 19.878,
+      "tts": {
+        "kind": "explain",
+        "speed": 1.05
+      },
+      "caption_chunks": [
+        {
+          "text": "Por dentro,",
+          "start": 10.76,
+          "end": 11.532,
+          "words": [
+            {
+              "w": "Por",
+              "start": 10.76,
+              "end": 10.992
+            },
+            {
+              "w": "dentro,",
+              "start": 10.992,
+              "end": 11.378
+            }
+          ]
+        },
+        {
+          "text": "é só um",
+          "start": 11.532,
+          "end": 12.022,
+          "words": [
+            {
+              "w": "é",
+              "start": 11.532,
+              "end": 11.661
+            },
+            {
+              "w": "só",
+              "start": 11.661,
+              "end": 11.842
+            },
+            {
+              "w": "um",
+              "start": 11.842,
+              "end": 12.022
+            }
+          ]
+        },
+        {
+          "text": "motor elétrico.",
+          "start": 12.022,
+          "end": 12.846,
+          "words": [
+            {
+              "w": "motor",
+              "start": 12.022,
+              "end": 12.357
+            },
+            {
+              "w": "elétrico.",
+              "start": 12.357,
+              "end": 12.846
+            }
+          ]
+        },
+        {
+          "text": "A corrente passa",
+          "start": 13.166,
+          "end": 14.138,
+          "words": [
+            {
+              "w": "A",
+              "start": 13.166,
+              "end": 13.297
+            },
+            {
+              "w": "corrente",
+              "start": 13.297,
+              "end": 13.797
+            },
+            {
+              "w": "passa",
+              "start": 13.797,
+              "end": 14.138
+            }
+          ]
+        },
+        {
+          "text": "pelas bobinas de",
+          "start": 14.138,
+          "end": 15.111,
+          "words": [
+            {
+              "w": "pelas",
+              "start": 14.138,
+              "end": 14.48
+            },
+            {
+              "w": "bobinas",
+              "start": 14.48,
+              "end": 14.927
+            },
+            {
+              "w": "de",
+              "start": 14.927,
+              "end": 15.111
+            }
+          ]
+        },
+        {
+          "text": "cobre, cria um",
+          "start": 15.111,
+          "end": 16.083,
+          "words": [
+            {
+              "w": "cobre,",
+              "start": 15.111,
+              "end": 15.453
+            },
+            {
+              "w": "cria",
+              "start": 15.61,
+              "end": 15.899
+            },
+            {
+              "w": "um",
+              "start": 15.899,
+              "end": 16.083
+            }
+          ]
+        },
+        {
+          "text": "campo magnético,",
+          "start": 16.083,
+          "end": 17.135,
+          "words": [
+            {
+              "w": "campo",
+              "start": 16.083,
+              "end": 16.425
+            },
+            {
+              "w": "magnético,",
+              "start": 16.425,
+              "end": 16.977
+            }
+          ]
+        },
+        {
+          "text": "e o eixo",
+          "start": 17.135,
+          "end": 17.686,
+          "words": [
+            {
+              "w": "e",
+              "start": 17.135,
+              "end": 17.266
+            },
+            {
+              "w": "o",
+              "start": 17.266,
+              "end": 17.397
+            },
+            {
+              "w": "eixo",
+              "start": 17.397,
+              "end": 17.686
+            }
+          ]
+        },
+        {
+          "text": "gira mais de",
+          "start": 17.686,
+          "end": 18.449,
+          "words": [
+            {
+              "w": "gira",
+              "start": 17.686,
+              "end": 17.976
+            },
+            {
+              "w": "mais",
+              "start": 17.976,
+              "end": 18.265
+            },
+            {
+              "w": "de",
+              "start": 18.265,
+              "end": 18.449
+            }
+          ]
+        },
+        {
+          "text": "mil vezes por minuto.",
+          "start": 18.449,
+          "end": 19.658,
+          "words": [
+            {
+              "w": "mil",
+              "start": 18.449,
+              "end": 18.685
+            },
+            {
+              "w": "vezes",
+              "start": 18.685,
+              "end": 19.027
+            },
+            {
+              "w": "por",
+              "start": 19.027,
+              "end": 19.263
+            },
+            {
+              "w": "minuto.",
+              "start": 19.263,
+              "end": 19.658
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc04_angled_blades",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "E o segredo está nas pás: elas são inclinadas, que nem asa de avião, e empurram o ar parado direto pra cima de você.",
+      "hud_text": "PÁS INCLINADAS FATIAM O AR",
+      "camera": "top_isometric",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.85
+        ],
+        "rotY": 0.65,
+        "anim": "build"
+      },
+      "fx": "none",
+      "labels": [
+        {
+          "text": "INCLINAÇÃO DE 28°",
+          "anchor": {
+            "obj": "fan_blades",
+            "local": [
+              0.3,
+              1.4,
+              0.1
+            ]
+          },
+          "side": "right",
+          "at": 0.4
+        }
+      ],
+      "objects": [
+        {
+          "id": "fan_blades",
+          "type": "electric_fan",
+          "pos": [
+            0.42,
+            0,
+            0.1
+          ],
+          "rot": [
+            0,
+            -0.35,
+            0
+          ],
+          "scale": [
+            1.15,
+            1.15,
+            1.15
+          ],
+          "cutaway": true,
+          "spin_speed": 10
+        },
+        {
+          "id": "air_push",
+          "type": "water_flow",
+          "pos": [
+            0.42,
+            1.15,
+            1.2
+          ],
+          "rot": [
+            0,
+            -1.5708,
+            0
+          ],
+          "color": "#bae6fd"
+        }
+      ],
+      "start": 19.878,
+      "speech_end": 27.306,
+      "end": 27.526,
+      "tts": {
+        "kind": "explain",
+        "speed": 1.05
+      },
+      "caption_chunks": [
+        {
+          "text": "E o segredo",
+          "start": 19.878,
+          "end": 20.713,
+          "words": [
+            {
+              "w": "E",
+              "start": 19.878,
+              "end": 20.032
+            },
+            {
+              "w": "o",
+              "start": 20.032,
+              "end": 20.187
+            },
+            {
+              "w": "segredo",
+              "start": 20.187,
+              "end": 20.713
+            }
+          ]
+        },
+        {
+          "text": "está nas pás:",
+          "start": 20.713,
+          "end": 21.611,
+          "words": [
+            {
+              "w": "está",
+              "start": 20.713,
+              "end": 21.054
+            },
+            {
+              "w": "nas",
+              "start": 21.054,
+              "end": 21.332
+            },
+            {
+              "w": "pás:",
+              "start": 21.332,
+              "end": 21.611
+            }
+          ]
+        },
+        {
+          "text": "elas são inclinadas,",
+          "start": 21.931,
+          "end": 23.209,
+          "words": [
+            {
+              "w": "elas",
+              "start": 21.931,
+              "end": 22.218
+            },
+            {
+              "w": "são",
+              "start": 22.218,
+              "end": 22.452
+            },
+            {
+              "w": "inclinadas,",
+              "start": 22.452,
+              "end": 23.053
+            }
+          ]
+        },
+        {
+          "text": "que nem asa",
+          "start": 23.209,
+          "end": 23.914,
+          "words": [
+            {
+              "w": "que",
+              "start": 23.209,
+              "end": 23.444
+            },
+            {
+              "w": "nem",
+              "start": 23.444,
+              "end": 23.679
+            },
+            {
+              "w": "asa",
+              "start": 23.679,
+              "end": 23.914
+            }
+          ]
+        },
+        {
+          "text": "de avião,",
+          "start": 23.914,
+          "end": 24.592,
+          "words": [
+            {
+              "w": "de",
+              "start": 23.914,
+              "end": 24.096
+            },
+            {
+              "w": "avião,",
+              "start": 24.096,
+              "end": 24.436
+            }
+          ]
+        },
+        {
+          "text": "e empurram o",
+          "start": 24.592,
+          "end": 25.349,
+          "words": [
+            {
+              "w": "e",
+              "start": 24.592,
+              "end": 24.723
+            },
+            {
+              "w": "empurram",
+              "start": 24.723,
+              "end": 25.218
+            },
+            {
+              "w": "o",
+              "start": 25.218,
+              "end": 25.349
+            }
+          ]
+        },
+        {
+          "text": "ar parado direto",
+          "start": 25.349,
+          "end": 26.314,
+          "words": [
+            {
+              "w": "ar",
+              "start": 25.349,
+              "end": 25.531
+            },
+            {
+              "w": "parado",
+              "start": 25.531,
+              "end": 25.923
+            },
+            {
+              "w": "direto",
+              "start": 25.923,
+              "end": 26.314
+            }
+          ]
+        },
+        {
+          "text": "pra cima de você.",
+          "start": 26.314,
+          "end": 27.306,
+          "words": [
+            {
+              "w": "pra",
+              "start": 26.314,
+              "end": 26.549
+            },
+            {
+              "w": "cima",
+              "start": 26.549,
+              "end": 26.836
+            },
+            {
+              "w": "de",
+              "start": 26.836,
+              "end": 27.019
+            },
+            {
+              "w": "você.",
+              "start": 27.019,
+              "end": 27.306
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc05_evaporation",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "Esse vento arranca o ar quente colado na sua pele e faz o suor evaporar mais rápido. E é essa evaporação que rouba o calor do seu corpo.",
+      "hud_text": "EVAPORAÇÃO ROUBA CALOR!",
+      "camera": "cutaway_center",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.55,
+        "anim": "point"
+      },
+      "fx": "none",
+      "labels": [
+        {
+          "text": "FLUXO CONTÍNUO",
+          "anchor": [
+            0.45,
+            1.15,
+            1.3
+          ],
+          "side": "right",
+          "at": 0.35
+        }
+      ],
+      "objects": [
+        {
+          "id": "air_back",
+          "type": "water_flow",
+          "pos": [
+            0.45,
+            1.15,
+            -1.0
+          ],
+          "rot": [
+            0,
+            -1.5708,
+            0
+          ],
+          "scale": [
+            0.5,
+            1,
+            1
+          ],
+          "color": "#94a3b8"
+        },
+        {
+          "id": "fan_full",
+          "type": "electric_fan",
+          "pos": [
+            0.45,
+            0,
+            0.1
+          ],
+          "rot": [
+            0,
+            -0.45,
+            0
+          ],
+          "scale": [
+            1.1,
+            1.1,
+            1.1
+          ],
+          "spin_speed": 20
+        },
+        {
+          "id": "air_front",
+          "type": "water_flow",
+          "pos": [
+            0.45,
+            1.15,
+            1.2
+          ],
+          "rot": [
+            0,
+            -1.5708,
+            0
+          ],
+          "color": "#38bdf8"
+        }
+      ],
+      "start": 27.526,
+      "speech_end": 35.938,
+      "end": 36.158,
+      "tts": {
+        "kind": "explain",
+        "speed": 1.05
+      },
+      "caption_chunks": [
+        {
+          "text": "Esse vento arranca",
+          "start": 27.526,
+          "end": 28.555,
+          "words": [
+            {
+              "w": "Esse",
+              "start": 27.526,
+              "end": 27.802
+            },
+            {
+              "w": "vento",
+              "start": 27.802,
+              "end": 28.128
+            },
+            {
+              "w": "arranca",
+              "start": 28.128,
+              "end": 28.555
+            }
+          ]
+        },
+        {
+          "text": "o ar quente",
+          "start": 28.555,
+          "end": 29.233,
+          "words": [
+            {
+              "w": "o",
+              "start": 28.555,
+              "end": 28.681
+            },
+            {
+              "w": "ar",
+              "start": 28.681,
+              "end": 28.856
+            },
+            {
+              "w": "quente",
+              "start": 28.856,
+              "end": 29.233
+            }
+          ]
+        },
+        {
+          "text": "colado na sua pele",
+          "start": 29.233,
+          "end": 30.287,
+          "words": [
+            {
+              "w": "colado",
+              "start": 29.233,
+              "end": 29.609
+            },
+            {
+              "w": "na",
+              "start": 29.609,
+              "end": 29.785
+            },
+            {
+              "w": "sua",
+              "start": 29.785,
+              "end": 30.011
+            },
+            {
+              "w": "pele",
+              "start": 30.011,
+              "end": 30.287
+            }
+          ]
+        },
+        {
+          "text": "e faz o",
+          "start": 30.607,
+          "end": 31.169,
+          "words": [
+            {
+              "w": "e",
+              "start": 30.607,
+              "end": 30.755
+            },
+            {
+              "w": "faz",
+              "start": 30.755,
+              "end": 31.021
+            },
+            {
+              "w": "o",
+              "start": 31.021,
+              "end": 31.169
+            }
+          ]
+        },
+        {
+          "text": "suor evaporar mais rápido.",
+          "start": 31.169,
+          "end": 32.827,
+          "words": [
+            {
+              "w": "suor",
+              "start": 31.169,
+              "end": 31.495
+            },
+            {
+              "w": "evaporar",
+              "start": 31.495,
+              "end": 32.057
+            },
+            {
+              "w": "mais",
+              "start": 32.057,
+              "end": 32.383
+            },
+            {
+              "w": "rápido.",
+              "start": 32.383,
+              "end": 32.827
+            }
+          ]
+        },
+        {
+          "text": "E é essa",
+          "start": 33.147,
+          "end": 33.666,
+          "words": [
+            {
+              "w": "E",
+              "start": 33.147,
+              "end": 33.271
+            },
+            {
+              "w": "é",
+              "start": 33.271,
+              "end": 33.394
+            },
+            {
+              "w": "essa",
+              "start": 33.394,
+              "end": 33.666
+            }
+          ]
+        },
+        {
+          "text": "evaporação que rouba",
+          "start": 33.666,
+          "end": 34.777,
+          "words": [
+            {
+              "w": "evaporação",
+              "start": 33.666,
+              "end": 34.234
+            },
+            {
+              "w": "que",
+              "start": 34.234,
+              "end": 34.456
+            },
+            {
+              "w": "rouba",
+              "start": 34.456,
+              "end": 34.777
+            }
+          ]
+        },
+        {
+          "text": "o calor do",
+          "start": 34.777,
+          "end": 35.395,
+          "words": [
+            {
+              "w": "o",
+              "start": 34.777,
+              "end": 34.901
+            },
+            {
+              "w": "calor",
+              "start": 34.901,
+              "end": 35.222
+            },
+            {
+              "w": "do",
+              "start": 35.222,
+              "end": 35.395
+            }
+          ]
+        },
+        {
+          "text": "seu corpo.",
+          "start": 35.395,
+          "end": 35.938,
+          "words": [
+            {
+              "w": "seu",
+              "start": 35.395,
+              "end": 35.617
+            },
+            {
+              "w": "corpo.",
+              "start": 35.617,
+              "end": 35.938
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc06_takeaway",
+      "tone": "payoff",
+      "environment": "living_room",
+      "narration": "Moral da história: ventilador ligado em sala vazia só gasta energia, e ainda esquenta o ambiente um pouquinho.",
+      "hud_text": "SALA VAZIA, ENERGIA PERDIDA",
+      "camera": "hero_wide",
+      "duck": {
+        "pos": [
+          -0.8,
+          0,
+          0.7
+        ],
+        "rotY": 0.55,
+        "anim": "point"
+      },
+      "fx": "none",
+      "objects": [
+        {
+          "id": "living_sofa",
+          "type": "sofa",
+          "pos": [
+            -0.1,
+            0,
+            -0.9
+          ],
+          "scale": [
+            0.95,
+            0.95,
+            0.95
+          ],
+          "color": "#dc2626"
+        },
+        {
+          "id": "fan_empty",
+          "type": "electric_fan",
+          "pos": [
+            0.5,
+            0,
+            0.3
+          ],
+          "rot": [
+            0,
+            -0.4,
+            0
+          ],
+          "scale": [
+            1.05,
+            1.05,
+            1.05
+          ],
+          "spin_speed": 18
+        }
+      ],
+      "start": 36.158,
+      "speech_end": 42.447,
+      "end": 42.647,
+      "tts": {
+        "kind": "payoff",
+        "speed": 1.15
+      },
+      "caption_chunks": [
+        {
+          "text": "Moral da história:",
+          "start": 36.158,
+          "end": 37.229,
+          "words": [
+            {
+              "w": "Moral",
+              "start": 36.158,
+              "end": 36.515
+            },
+            {
+              "w": "da",
+              "start": 36.515,
+              "end": 36.707
+            },
+            {
+              "w": "história:",
+              "start": 36.707,
+              "end": 37.229
+            }
+          ]
+        },
+        {
+          "text": "ventilador ligado em",
+          "start": 37.549,
+          "end": 38.645,
+          "words": [
+            {
+              "w": "ventilador",
+              "start": 37.549,
+              "end": 38.109
+            },
+            {
+              "w": "ligado",
+              "start": 38.109,
+              "end": 38.475
+            },
+            {
+              "w": "em",
+              "start": 38.475,
+              "end": 38.645
+            }
+          ]
+        },
+        {
+          "text": "sala vazia só",
+          "start": 38.645,
+          "end": 39.401,
+          "words": [
+            {
+              "w": "sala",
+              "start": 38.645,
+              "end": 38.913
+            },
+            {
+              "w": "vazia",
+              "start": 38.913,
+              "end": 39.23
+            },
+            {
+              "w": "só",
+              "start": 39.23,
+              "end": 39.401
+            }
+          ]
+        },
+        {
+          "text": "gasta energia,",
+          "start": 39.401,
+          "end": 40.278,
+          "words": [
+            {
+              "w": "gasta",
+              "start": 39.401,
+              "end": 39.718
+            },
+            {
+              "w": "energia,",
+              "start": 39.718,
+              "end": 40.132
+            }
+          ]
+        },
+        {
+          "text": "e ainda esquenta",
+          "start": 40.278,
+          "end": 41.18,
+          "words": [
+            {
+              "w": "e",
+              "start": 40.278,
+              "end": 40.4
+            },
+            {
+              "w": "ainda",
+              "start": 40.4,
+              "end": 40.717
+            },
+            {
+              "w": "esquenta",
+              "start": 40.717,
+              "end": 41.18
+            }
+          ]
+        },
+        {
+          "text": "o ambiente um pouquinho.",
+          "start": 41.18,
+          "end": 42.447,
+          "words": [
+            {
+              "w": "o",
+              "start": 41.18,
+              "end": 41.302
+            },
+            {
+              "w": "ambiente",
+              "start": 41.302,
+              "end": 41.765
+            },
+            {
+              "w": "um",
+              "start": 41.765,
+              "end": 41.935
+            },
+            {
+              "w": "pouquinho.",
+              "start": 41.935,
+              "end": 42.447
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sc07_outro",
+      "tone": "outro",
+      "environment": "living_room",
+      "narration": "Gostou? Segue o Pato em Corte pra mais ciência do dia a dia!",
+      "hud_text": "SEGUE O PATO EM CORTE!",
+      "camera": "hero_wide",
+      "duck": {
+        "pos": [
+          -0.35,
+          0,
+          1.05
+        ],
+        "rotY": 0.15,
+        "anim": "celebrate"
+      },
+      "fx": "speed_lines",
+      "objects": [
+        {
+          "id": "living_sofa",
+          "type": "sofa",
+          "pos": [
+            -0.1,
+            0,
+            -0.9
+          ],
+          "scale": [
+            0.95,
+            0.95,
+            0.95
+          ],
+          "color": "#dc2626"
+        },
+        {
+          "id": "fan_final",
+          "type": "electric_fan",
+          "pos": [
+            0.55,
+            0,
+            0.4
+          ],
+          "rot": [
+            0,
+            -0.4,
+            0
+          ],
+          "scale": [
+            1.05,
+            1.05,
+            1.05
+          ],
+          "spin_speed": 22
+        }
+      ],
+      "start": 42.647,
+      "speech_end": 46.722,
+      "end": 47.072,
+      "tts": {
+        "kind": "outro",
+        "speed": 1.08
+      },
+      "caption_chunks": [
+        {
+          "text": "Gostou?",
+          "start": 42.647,
+          "end": 43.348,
+          "words": [
+            {
+              "w": "Gostou?",
+              "start": 42.647,
+              "end": 43.348
+            }
+          ]
+        },
+        {
+          "text": "Segue o Pato",
+          "start": 43.668,
+          "end": 44.431,
+          "words": [
+            {
+              "w": "Segue",
+              "start": 43.668,
+              "end": 44.01
+            },
+            {
+              "w": "o",
+              "start": 44.01,
+              "end": 44.142
+            },
+            {
+              "w": "Pato",
+              "start": 44.142,
+              "end": 44.431
+            }
+          ]
+        },
+        {
+          "text": "em Corte pra",
+          "start": 44.431,
+          "end": 45.195,
+          "words": [
+            {
+              "w": "em",
+              "start": 44.431,
+              "end": 44.616
+            },
+            {
+              "w": "Corte",
+              "start": 44.616,
+              "end": 44.958
+            },
+            {
+              "w": "pra",
+              "start": 44.958,
+              "end": 45.195
+            }
+          ]
+        },
+        {
+          "text": "mais ciência do",
+          "start": 45.195,
+          "end": 46.117,
+          "words": [
+            {
+              "w": "mais",
+              "start": 45.195,
+              "end": 45.485
+            },
+            {
+              "w": "ciência",
+              "start": 45.485,
+              "end": 45.932
+            },
+            {
+              "w": "do",
+              "start": 45.932,
+              "end": 46.117
+            }
+          ]
+        },
+        {
+          "text": "dia a dia!",
+          "start": 46.117,
+          "end": 46.722,
+          "words": [
+            {
+              "w": "dia",
+              "start": 46.117,
+              "end": 46.354
+            },
+            {
+              "w": "a",
+              "start": 46.354,
+              "end": 46.485
+            },
+            {
+              "w": "dia!",
+              "start": 46.485,
+              "end": 46.722
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,12 +6,10 @@ export class FxManager {
     this.group = new THREE.Group();
     this.scene.add(this.group);
     this.currentFx = 'none';
-
     this._initPools();
   }
 
   _initPools() {
-    // Pool de fumaça / faíscas (24 partículas determinísticas)
     this.particles = [];
     const geo = new THREE.DodecahedronGeometry(0.14, 0);
 
@@ -26,26 +24,18 @@ export class FxManager {
       mesh.visible = false;
       this.group.add(mesh);
 
-      // Ângulos pré-calculados deterministicamente (Golden Angle)
-      const angle = i * 2.39996;
-      const radius = 0.25 + (i % 5) * 0.18;
       this.particles.push({
         mesh,
-        angle,
-        radius,
+        angle: i * 2.39996,
+        radius: 0.25 + (i % 5) * 0.18,
         speed: 0.8 + (i % 4) * 0.35,
         phase: (i / 24) * Math.PI * 2
       });
     }
 
-    // Linhas de velocidade (Speed Lines) nas bordas para ganchos
     this.speedLinesGroup = new THREE.Group();
     const lineGeo = new THREE.BoxGeometry(0.04, 1.4, 0.04);
-    const lineMat = new THREE.MeshBasicMaterial({
-      color: 0xffffff,
-      transparent: true,
-      opacity: 0.45
-    });
+    const lineMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 });
 
     for (let i = 0; i < 16; i++) {
       const angle = (i / 16) * Math.PI * 2;
@@ -63,20 +53,27 @@ export class FxManager {
 
   setEffect(fxName) {
     this.currentFx = fxName || 'none';
-    const showParticles = this.currentFx === 'smoke' || this.currentFx === 'sparks';
+    const showParticles =
+      this.currentFx === 'smoke' || this.currentFx === 'sparks' || this.currentFx === 'sweat';
     this.speedLinesGroup.visible = this.currentFx === 'speed_lines';
 
     for (const p of this.particles) {
       p.mesh.visible = showParticles;
-      if (this.currentFx === 'smoke') {
-        p.mesh.material.color.setHex(0x94a3b8);
-      } else if (this.currentFx === 'sparks') {
-        p.mesh.material.color.setHex(0xfacc15);
-      }
+      if (this.currentFx === 'smoke') p.mesh.material.color.setHex(0x94a3b8);
+      else if (this.currentFx === 'sparks') p.mesh.material.color.setHex(0xfacc15);
+      else if (this.currentFx === 'sweat') p.mesh.material.color.setHex(0x38bdf8);
     }
   }
 
-  update(t) {
+  /**
+   * @param {number} t tempo absoluto (s)
+   * @param {THREE.Vector3} [anchor] posição do Pato (duck.root.position); o suor orbita a cabeça dele
+   */
+  update(t, anchor = null) {
+    const ax = anchor ? anchor.x : 0;
+    const ay = anchor ? anchor.y : 0;
+    const az = anchor ? anchor.z : 0;
+
     if (this.currentFx === 'smoke') {
       for (const p of this.particles) {
         const life = (t * p.speed + p.phase) % 1;
@@ -85,8 +82,7 @@ export class FxManager {
           0.6 + life * 2.4,
           Math.sin(p.angle) * p.radius * (0.5 + life)
         );
-        const s = Math.sin(life * Math.PI) * 1.4;
-        p.mesh.scale.setScalar(Math.max(0.01, s));
+        p.mesh.scale.setScalar(Math.max(0.01, Math.sin(life * Math.PI) * 1.4));
       }
     } else if (this.currentFx === 'sparks') {
       for (const p of this.particles) {
@@ -97,6 +93,24 @@ export class FxManager {
           Math.sin(p.phase) * 0.8
         );
         p.mesh.scale.setScalar(Math.max(0.01, (1 - life) * 0.8));
+      }
+    } else if (this.currentFx === 'sweat') {
+      for (let i = 0; i < this.particles.length; i++) {
+        const p = this.particles[i];
+        if (i >= 10) {
+          p.mesh.visible = false;
+          continue;
+        }
+        p.mesh.visible = true;
+        const life = (t * 1.6 + p.phase) % 1;
+        const side = i % 2 === 0 ? -1 : 1;
+        const spread = 0.45 + life * 0.85;
+        p.mesh.position.set(
+          ax + side * spread,
+          ay + 1.5 + Math.sin(life * Math.PI) * 0.55 - life * 0.4,
+          az + 0.1 + Math.cos(p.phase) * 0.25
+        );
+        p.mesh.scale.set(0.55, 0.85, 0.55);
       }
     } else if (this.currentFx === 'speed_lines') {
       this.speedLinesGroup.children.forEach((line, idx) => {

@@ -1,0 +1,117 @@
+{
+  "episode_id": "ep01_ventilador",
+  "title": "O ventilador não esfria o ar. Então por que refresca?",
+  "outfit": "workshop",
+  "scenes": [
+    {
+      "id": "sc01_calorao_hook",
+      "tone": "hook",
+      "environment": "living_room",
+      "narration": "Tá um calorão... || você cai no sofá, liga o ventilador no máximo e pensa: agora vai!",
+      "hud_text": "CALOR DERRETENDO O PATO!",
+      "camera": "hero_wide",
+      "duck": { "pos": [-0.65, 0, 0.85], "rotY": 0.25, "anim": "overheat" },
+      "fx": "sweat",
+      "objects": [
+        { "id": "living_sofa", "type": "sofa", "pos": [-0.1, 0, -0.9], "scale": [0.95, 0.95, 0.95], "color": "#dc2626" },
+        { "id": "thermo", "type": "thermometer", "pos": [0.8, 0, -0.4], "scale": [1.15, 1.15, 1.15] }
+      ]
+    },
+    {
+      "id": "sc02_fourth_wall",
+      "tone": "curious",
+      "environment": "living_room",
+      "narration": "Só que tem uma coisa que ninguém te conta: || esse ventilador não esfria o ar. Nem meio grau!",
+      "hud_text": "ELE NÃO ESFRIA O AR!",
+      "camera": "duck_closeup",
+      "duck": { "pos": [-0.75, 0, 0.85], "rotY": 0.3, "anim": "fourth_wall" },
+      "fx": "speed_lines",
+      "labels": [
+        { "text": "MESMA TEMPERATURA", "anchor": { "obj": "real_fan", "local": [0, 1.15, 0] }, "side": "right", "at": 0.5 }
+      ],
+      "objects": [
+        { "id": "living_sofa", "type": "sofa", "pos": [-0.1, 0, -0.9], "scale": [0.95, 0.95, 0.95], "color": "#dc2626" },
+        { "id": "real_fan", "type": "electric_fan", "pos": [0.5, 0, 0.2], "rot": [0, -0.45, 0], "scale": [1.05, 1.05, 1.05], "spin_speed": 18 }
+      ]
+    },
+    {
+      "id": "sc03_motor_cutaway",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "Por dentro, é só um motor elétrico. || A corrente passa pelas bobinas de cobre, cria um campo magnético, e o eixo gira mais de mil vezes por minuto.",
+      "hud_text": "POR DENTRO DO MOTOR",
+      "camera": "cutaway_center",
+      "duck": { "pos": [-0.8, 0, 0.7], "rotY": 0.6, "anim": "point" },
+      "fx": "none",
+      "labels": [
+        { "text": "BOBINAS DE COBRE", "anchor": { "obj": "fan_cutaway", "local": [0.165, 1.15, -0.22] }, "side": "right", "at": 0.4 }
+      ],
+      "objects": [
+        { "id": "fan_cutaway", "type": "electric_fan", "pos": [0.45, 0, 0.1], "rot": [0, -0.75, 0], "scale": [1.15, 1.15, 1.15], "cutaway": true, "spin_speed": 14 }
+      ]
+    },
+    {
+      "id": "sc04_angled_blades",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "E o segredo está nas pás: || elas são inclinadas, que nem asa de avião, e empurram o ar parado direto pra cima de você.",
+      "hud_text": "PÁS INCLINADAS FATIAM O AR",
+      "camera": "top_isometric",
+      "duck": { "pos": [-0.8, 0, 0.85], "rotY": 0.65, "anim": "build" },
+      "fx": "none",
+      "labels": [
+        { "text": "INCLINAÇÃO DE 28°", "anchor": { "obj": "fan_blades", "local": [0.3, 1.4, 0.1] }, "side": "right", "at": 0.4 }
+      ],
+      "objects": [
+        { "id": "fan_blades", "type": "electric_fan", "pos": [0.42, 0, 0.1], "rot": [0, -0.35, 0], "scale": [1.15, 1.15, 1.15], "cutaway": true, "spin_speed": 10 },
+        { "id": "air_push", "type": "water_flow", "pos": [0.42, 1.15, 1.2], "rot": [0, -1.5708, 0], "color": "#bae6fd" }
+      ]
+    },
+    {
+      "id": "sc05_evaporation",
+      "tone": "explain",
+      "environment": "workshop",
+      "narration": "Esse vento arranca o ar quente colado na sua pele || e faz o suor evaporar mais rápido. || E é essa evaporação que rouba o calor do seu corpo.",
+      "hud_text": "EVAPORAÇÃO ROUBA CALOR!",
+      "camera": "cutaway_center",
+      "duck": { "pos": [-0.8, 0, 0.7], "rotY": 0.55, "anim": "point" },
+      "fx": "none",
+      "labels": [
+        { "text": "FLUXO CONTÍNUO", "anchor": [0.45, 1.15, 1.3], "side": "right", "at": 0.35 }
+      ],
+      "objects": [
+        { "id": "air_back", "type": "water_flow", "pos": [0.45, 1.15, -1.0], "rot": [0, -1.5708, 0], "scale": [0.5, 1, 1], "color": "#94a3b8" },
+        { "id": "fan_full", "type": "electric_fan", "pos": [0.45, 0, 0.1], "rot": [0, -0.45, 0], "scale": [1.1, 1.1, 1.1], "spin_speed": 20 },
+        { "id": "air_front", "type": "water_flow", "pos": [0.45, 1.15, 1.2], "rot": [0, -1.5708, 0], "color": "#38bdf8" }
+      ]
+    },
+    {
+      "id": "sc06_takeaway",
+      "tone": "payoff",
+      "environment": "living_room",
+      "narration": "Moral da história: || ventilador ligado em sala vazia só gasta energia, e ainda esquenta o ambiente um pouquinho.",
+      "hud_text": "SALA VAZIA, ENERGIA PERDIDA",
+      "camera": "hero_wide",
+      "duck": { "pos": [-0.8, 0, 0.7], "rotY": 0.55, "anim": "point" },
+      "fx": "none",
+      "objects": [
+        { "id": "living_sofa", "type": "sofa", "pos": [-0.1, 0, -0.9], "scale": [0.95, 0.95, 0.95], "color": "#dc2626" },
+        { "id": "fan_empty", "type": "electric_fan", "pos": [0.5, 0, 0.3], "rot": [0, -0.4, 0], "scale": [1.05, 1.05, 1.05], "spin_speed": 18 }
+      ]
+    },
+    {
+      "id": "sc07_outro",
+      "tone": "outro",
+      "environment": "living_room",
+      "narration": "Gostou? || Segue o Pato em Corte pra mais ciência do dia a dia!",
+      "hud_text": "SEGUE O PATO EM CORTE!",
+      "camera": "hero_wide",
+      "duck": { "pos": [-0.35, 0, 1.05], "rotY": 0.15, "anim": "celebrate" },
+      "fx": "speed_lines",
+      "objects": [
+        { "id": "living_sofa", "type": "sofa", "pos": [-0.1, 0, -0.9], "scale": [0.95, 0.95, 0.95], "color": "#dc2626" },
+        { "id": "fan_final", "type": "electric_fan", "pos": [0.55, 0, 0.4], "rot": [0, -0.4, 0], "scale": [1.05, 1.05, 1.05], "spin_speed": 22 }
+      ]
+    }
+  ]
+}
